@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: CasaDeCambio
+
+  datasource:
+    url: jdbc:h2:mem:devDb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      data-locations: classpath:import.sql
+
+
+#Open api configuration
+open_api:
+  title: PRUEBA TECNICA INDRA
+  description: API para aplicar un tipo de cambio a un monto.
+  contact:
+    name: Christopher Peñaloza
+    email: penalozacris2@gmail.com
+  servers:
+    local:
+      url: http://localhost:8080
+      description: Local Environment
+    production:
+      url: https://localhost:9090
+      description: Productive Environment
+
+
+
