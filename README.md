@@ -1,2 +1,0 @@
-# test-indra
-test-indra
